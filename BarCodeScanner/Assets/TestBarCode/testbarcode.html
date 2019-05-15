@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Test Bar Code</title>
+
+    <script type='text/javascript'>
+        function getQRValue(result) {
+            document.getElementById("result").innerHTML = "Result: " + result;
+            alert(result);
+    };
+
+    function scan() {
+		CSharpQRInterface.ScanQR();
+    };
+    </script>
+	<style type="text/css">
+	.wrapper {
+		text-align: center;
+	}
+
+	.button {
+		position: absolute;
+		top: 50%;
+	}
+	
+	p,button {
+		font-size: 30px;
+	}
+	</style>
+</head>
+<body style="background-color:white;">
+	<div class="wrapper">
+		<button type="button" onclick="scan()">SCAN</button>
+		<p id="result">Result:</p>
+	</div>
+</body>
+</html>
